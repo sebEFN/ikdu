@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 94850001}
   - component: {fileID: 94850003}
   - component: {fileID: 94850002}
+  - component: {fileID: 94850004}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -482,7 +483,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -527,6 +528,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94850000}
   m_CullTransparentMesh: 1
+--- !u!114 &94850004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94850000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c1f652299036207b579016a54bd4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voresText: {fileID: 94850002}
+  startingNumber: 10
 --- !u!1 &178202873
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +705,7 @@ GameObject:
   - component: {fileID: 303210163}
   - component: {fileID: 303210165}
   - component: {fileID: 303210164}
+  - component: {fileID: 303210166}
   m_Layer: 5
   m_Name: math
   m_TagString: Untagged
@@ -757,6 +773,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303210162}
   m_CullTransparentMesh: 1
+--- !u!114 &303210166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303210162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c1f652299036207b579016a54bd4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voresText: {fileID: 94850002}
+  startingNumber: 10
 --- !u!1 &371490280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,11 +1910,11 @@ RectTransform:
   - {fileID: 974064411}
   m_Father: {fileID: 303210163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -302, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &726288109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,7 +1973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 726288109}
+      - m_Target: {fileID: 94850004}
         m_TargetAssemblyTypeName: math, Assembly-CSharp
         m_MethodName: plusNumber
         m_Mode: 3
@@ -3827,11 +3857,11 @@ RectTransform:
   - {fileID: 833595216}
   m_Father: {fileID: 303210163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 298, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1338407767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3890,9 +3920,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1338407767}
+      - m_Target: {fileID: 94850004}
         m_TargetAssemblyTypeName: math, Assembly-CSharp
-        m_MethodName: plusNumber
+        m_MethodName: minusNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4465,7 +4495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1882855082
 RectTransform:
   m_ObjectHideFlags: 0
