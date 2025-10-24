@@ -4,7 +4,7 @@ public class menuManager : MonoBehaviour
 {
 
 [SerializeField]
-    private GameObject notwork;
+    private GameObject video;
     [SerializeField]
     public GameObject math;
     [SerializeField]
@@ -13,8 +13,8 @@ public class menuManager : MonoBehaviour
 
     public void ChangeThat(string nameOfPanel)
     {
-        notwork.SetActive(nameOfPanel == "notwork");
-        //math.SetActive(nameOfPanel == "math");
+        video.SetActive(nameOfPanel == "video");
+        math.SetActive(nameOfPanel == "math");
         madPanel.SetActive(nameOfPanel == "mad");
  
    }
